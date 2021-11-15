@@ -34,7 +34,7 @@ def remove_app(appId):
     f.close()
 
     # Remove the app
-    appLoc = apps[installDir]
+    appLoc = apps['installDir']
     os.remove(appLoc)
     del apps[appId]
     return {'Status': 'Success'}
