@@ -12,4 +12,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from . import *
+# Import libraries
+import os
+import json
+import crossapp.remove.cap import remove_app
+
+# Constants
+HOME = os.path.expanduser("~")
+APPINFO = os.path.join(HOME, '.crossapp', 'apps.json')
+
+def remove_list(app_list):
+    """Remove a list of apps"""
+    for app in app_list:
+        _ = remove_app(app)
+    return _
+
+def remove_app(appId):
+    # Load the installed apps
+    f = open(APPINFO, 'r')
+    apps = json.load(f)
+    f.close()
+
+    # Remove the app
+    appLoc = apps[installDir]
+    os.remove(appLoc)
+    del apps[appId]
+    return {'Status': 'Success'}
