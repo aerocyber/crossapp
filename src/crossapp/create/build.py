@@ -41,7 +41,7 @@ def buildFromSpec(spec):
         "appId":   spec["appId"],
         }
     
-    d = open(os.path.join(os.path.dirname(spec), 'build')), name+spec["version"]+".pyz"), 'rb')
+    d = open(os.path.join(os.path.dirname(spec), 'build'), (name+spec["version"]+".pyz"), 'rb')
     data = d.read()
     d.close()
     

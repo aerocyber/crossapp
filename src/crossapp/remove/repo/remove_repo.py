@@ -15,7 +15,7 @@
 # Import libraries
 import os
 import pickle
-import crossapp.remove.cap import remove_app
+from crossapp.remove.cap import remove_app
 
 # Constants
 HOME = os.path.expanduser("~")
