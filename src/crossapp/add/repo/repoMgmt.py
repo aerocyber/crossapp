@@ -9,7 +9,7 @@ def add(repoName, repoUrl):
     f = open(REPOS, 'rb')
     db = pickle.load(f)
     f.close()
-    if (repoName not in db.keys()) and (repoUrl not in db.values()):
-        db[repoName] = repoUrl
-    else:
+    if (repoName in db.keys()) or (repoUrl in db.values()):
         return {"Status": "Fail", "Detail": "Repo name or Url Exist"}
+    
+    
