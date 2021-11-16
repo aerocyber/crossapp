@@ -13,6 +13,8 @@
 # limitations under the License.
 
 import crossapp
-import unittest
 
-def 
+
+def test_version():
+    assert crossapp.__version__.Version == '1.0.0'
+
