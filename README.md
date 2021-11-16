@@ -39,5 +39,7 @@ crossapp --help
 ## System Requirements
 
 OS: Linux, macOS, Windows
+
 Minimal Python version: 3.6
+
 pip version: 19.0.0 or higher
