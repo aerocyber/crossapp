@@ -2,7 +2,13 @@
 
 A zipapp based app packaging and distribution utility for Python.
 
-[![OSSAR](https://github.com/aerocyber/crossapp/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/ossar-analysis.yml) [![CodeQL](https://github.com/aerocyber/crossapp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/codeql-analysis.yml) [![Python package](https://github.com/aerocyber/crossapp/actions/workflows/python-package.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/python-package.yml) [![Pylint](https://github.com/aerocyber/crossapp/actions/workflows/pylint.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/pylint.yml) [![Python application](https://github.com/aerocyber/crossapp/actions/workflows/python-app.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/python-app.yml)
+## Project temporarily NOT under development
+
+Due to some trouble and giving more focus for [Osmata](https://github.com/aerocyber/osmata), Crossapp will NOT be under active development. However, once release 1.0 of Osmata is made, development continues. As of now, this project lacks documentation, testing the cli(manually), writing tests and then, overall test of the program.
+
+## Statistics
+
+[![OSSAR](https://github.com/aerocyber/crossapp/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/ossar-analysis.yml) [![CodeQL](https://github.com/aerocyber/crossapp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/codeql-analysis.yml) [![Python package](https://github.com/aerocyber/crossapp/actions/workflows/python-package.yml/badge.svg)](https://github.com/aerocyber/crossapp/actions/workflows/python-package.yml)
 
 Crossapp is  a Python package that provides a simple and easy to use interface to create and distribute Python applications. It is based on Python's zipapp module, which is a tool that allows you to create a standalone application from a Python source file.
 
@@ -12,6 +18,12 @@ Currently, Crossapp is only available for Python 3.6 and above. To install Cross
 
 ```bash
 python3 -m pip install crossapp --user --upgrade
+```
+
+or, for latest(dev) un-released version,
+
+```bash
+python3 -m pip install --user --upgrade git+https://github.com/aerocyber/crossapp#egg=crossapp
 ```
 
 ## Usage
