@@ -15,7 +15,7 @@
 import os
 from json import loads
 
-HOME = os.expanduser("~")
+HOME = os.path.expanduser("~")
 APPINFO = os.path.join(HOME, '.crossapp', 'apps.json')
 
 

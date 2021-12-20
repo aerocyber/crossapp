@@ -15,7 +15,7 @@
 import os
 import json
 
-HOME = os.expanduser("~")
+HOME = os.path.expanduser("~")
 APPINFO = os.path.join(HOME, '.crossapp', 'apps.json')
 
 def install(cap_path):
