@@ -2,9 +2,6 @@
 
 A zipapp based app packaging and distribution utility for Python.
 
-## Project temporarily NOT under development
-
-Due to some trouble and giving more focus for [Osmata](https://github.com/aerocyber/osmata), Crossapp will NOT be under active development. However, once release 1.0 of Osmata is made, development continues. As of now, this project lacks documentation, testing the cli(manually), writing tests and then, overall test of the program.
 
 ## Statistics
 
