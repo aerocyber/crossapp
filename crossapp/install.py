@@ -21,7 +21,7 @@
 #### Imports ####
 import os
 import requests
-import envCreate
+from . import envCreate
 import pickle
 import json
 import shutil
@@ -59,8 +59,8 @@ def create_virtualenv_dir():
     Create the virtualenv directory if not exists already.
     """
     if not os.path.exists(VIRTUALENV_DIR):
-        env = envCreate(VIRTUALENV_DIR)
-        env.create_env()
+        env = envCreate.createEnv(VIRTUALENV_DIR)
+        env.create_virtual_env()
 
 
 # Create database directory
