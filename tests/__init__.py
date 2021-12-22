@@ -12,9 +12,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import crossapp
-
-
-def test_version():
-    assert crossapp.__version__.Version == '1.0.0'
-
