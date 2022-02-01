@@ -44,42 +44,42 @@ DATABASE_FILE = os.path.join(DATABASE_DIR, "crossapp.db")
 #### Functions ####
 
 # Create CrossApp directory
-def create_crossapp_dir():
+def create_crossapp_dir(crossappdir=CROSSAPP_DIR):
     """
     Create the CrossApp directory if not exists already.
     """
-    if not os.path.exists(CROSSAPP_DIR):
-        os.makedirs(CROSSAPP_DIR)
+    if not os.path.exists(crossappdir):
+        os.makedirs(crossappdir)
 
 # Create virtualenv directory
 
 
-def create_virtualenv_dir():
+def create_virtualenv_dir(venvDir=VIRTUALENV_DIR):
     """
     Create the virtualenv directory if not exists already.
     """
-    if not os.path.exists(VIRTUALENV_DIR):
-        env = envCreate.createEnv(VIRTUALENV_DIR)
+    if not os.path.exists(venvDir):
+        env = envCreate.createEnv(venvDir)
         env.create_virtual_env()
 
 
 # Create database directory
-def create_database_dir():
+def create_database_dir(dbDir=DATABASE_DIR):
     """
     Create the database directory if not exists already.
     """
-    if not os.path.exists(DATABASE_DIR):
-        os.makedirs(DATABASE_DIR)
+    if not os.path.exists(dbDir):
+        os.makedirs(dbDir)
 
 # Create database file
 
 
-def create_database_file():
+def create_database_file(dbFile=DATABASE_FILE):
     """
     Create the database file if not exists already.
     """
-    if not os.path.exists(DATABASE_FILE):
-        open(DATABASE_FILE, "w").close()
+    if not os.path.exists(dbFile):
+        open(dbFile, "w").close()
 
 #### End ####
 
@@ -115,13 +115,13 @@ class Install:
         Initialize the installation.
         """
         # Create CrossApp directory
-        create_crossapp_dir()
+        create_crossapp_dir(crossappdir=crossapp_dir)
         # Create virtualenv directory
-        create_virtualenv_dir()
+        create_virtualenv_dir(venvDir=virtualenv_dir)
         # Create database directory
-        create_database_dir()
+        create_database_dir(dbDir=database_dir)
         # Create database file
-        create_database_file()
+        create_database_file(dbFile=database_file)
 
     def get_installed_apps(self):
         """
@@ -141,8 +141,11 @@ class Install:
         f.close()
         if appid in db:
             loc = db[appid]["Location"]
+            repo = db[appid]["Repo"]
         else:
             return AppNotFound("App not installed.")
+
+        repox = add_repo.Repo(repo)
 
         if removeDataDir:
             shutil.rmtree(loc)
