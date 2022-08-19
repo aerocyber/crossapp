@@ -16,7 +16,7 @@ Currently, Crossapp is only available for Python 3.6 and above. To install Cross
 python3 -m pip install crossapp --user --upgrade
 ```
 
-or, for latest(dev) un-released version,
+or, for development version,
 
 ```bash
 python3 -m pip install --user --upgrade git+https://github.com/aerocyber/crossapp#egg=crossapp
@@ -48,6 +48,6 @@ crossapp --help
 
 OS: Linux, macOS, Windows
 
-Minimal Python version: 3.6
+Minimal Python version: 3.8
 
 pip version: 19.0.0 or higher
