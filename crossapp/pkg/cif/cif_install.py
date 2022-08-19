@@ -195,4 +195,4 @@ def install_crd(crd_path: str) -> None:
     Args:
         crd_path (str): Path to crossapp distribution file.
     """
-    pass
+    ...
